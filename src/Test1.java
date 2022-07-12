@@ -74,8 +74,9 @@ public class Test1 {
         products.add(new Product(200, "Телевизор"));
         products.add(new Product(300, "Стиральная машина"));
 
- //       Collections.shuffle(products);  //перетасовать товары в списке. каждый раз они будут по-разному
-//    1. найти порядковый номер товара "Зубная паста" в этом списке (по названию)
+
+        Collections.shuffle(products);  //перетасовать товары в списке. каждый раз они будут по-разному
+//1. найти порядковый номер товара "Зубная паста" в этом списке (по названию)
         int toothPasteIndex = -1;
         String name = "Зубная паста";
 
@@ -100,9 +101,9 @@ public class Test1 {
 
 //2. удалить из списка продукт с названием "Зубная паста" - используя найденный индекс "toothPasteIndex"
 //        products.... удалить зубную пасту
+        products.remove(toothPasteIndex);
 
-//        products.remove(toothPasteIndex);
-//        System.out.println(products);
+
 
 //3. найти порядковый номер товара c id=5
         int productId5 = 5;
@@ -136,12 +137,18 @@ public class Test1 {
 
 //5. найти в списке продукт с названием
         name = "Стиральная машина";
+        int index = -1;
+
         for (int t = 0; t < products.size(); t++) {
             Product p = products.get(t);
             if (p.getTitle().equals(name)) {
                 System.out.println(p);
+                index = t;
             }
         }
+
+        products.remove(index);
+        System.out.println(products);
 //6. удалить из списка продукт "washer"
 //        for (int i = 0; i < products.size(); i++) {
 //            Product p = products.get(i);
@@ -154,6 +161,6 @@ public class Test1 {
         for (Product e : products) {
             System.out.println(e.getId() + ", " + e.getTitle());
         }
-        }
     }
+}
 
