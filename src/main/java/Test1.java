@@ -1,8 +1,10 @@
+import com.lirik.model.Product;
+
 import java.util.*;
 
 public class Test1 {
 
-//    public static Product findByTitle1(List<Product> productList, String keyword) {
+//    public static com.lirik.model.Product findByTitle1(List<com.lirik.model.Product> productList, String keyword) {
 //        return productList.stream() // stream loop
 //                .filter(c -> c.getTitle().contains(keyword))
 //                .collect(Collectors.toList());
@@ -82,8 +84,10 @@ public class Test1 {
 
         for (int i = 0; i < products.size(); i++) {
             Product p = products.get(i);
+
             if (p.getTitle().equals(name)) {
                 toothPasteIndex = i;
+                break;
             }
         }
         System.out.println(toothPasteIndex);
@@ -100,7 +104,7 @@ public class Test1 {
        System.out.println("Порядковый номер товара `Зубная паста`: "+ toothPasteIndex);
 
 //2. удалить из списка продукт с названием "Зубная паста" - используя найденный индекс "toothPasteIndex"
-//        products.... удалить зубную пасту
+//        productsList.... удалить зубную пасту
         products.remove(toothPasteIndex);
 
 
@@ -121,39 +125,26 @@ public class Test1 {
 
 //4. удалить из списка продукт с id=5  "indexOfProductWithId5"
 
-         int id = 5;
-         i = 0;
-         boolean removed = false;
-         while (i < products.size() && !removed) {
-             Product p = products.get(i);
-             if (p.getId() == id) {
-                 products.remove(i);
-                 removed = true;
-                 //Лучше ли использовать brake?
-             }
-             i ++;
-         }
-            System.out.println(products);
+       products.remove(indexOfProductWithId5);
 
 //5. найти в списке продукт с названием
         name = "Стиральная машина";
-        int index = -1;
+        Product washer = null;
 
         for (int t = 0; t < products.size(); t++) {
             Product p = products.get(t);
             if (p.getTitle().equals(name)) {
-                System.out.println(p);
-                index = t;
+                washer = p;
             }
         }
 
-        products.remove(index);
+        products.remove(washer);
         System.out.println(products);
 //6. удалить из списка продукт "washer"
-//        for (int i = 0; i < products.size(); i++) {
-//            Product p = products.get(i);
+//        for (int i = 0; i < productsList.size(); i++) {
+//            com.lirik.model.Product p = productsList.get(i);
 //            if (p.getTitle().equals(name)) {
-//                products.remove(p);
+//                productsList.remove(p);
 //            }
 //        }
 //

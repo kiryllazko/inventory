@@ -1,0 +1,16 @@
+com\lirik\model\Product.class
+com\lirik\model\CarPart.class
+string\Test.class
+com\lirik\exception\DuplicatedException.class
+com\lirik\model\Food$ShelfLife.class
+Test1.class
+string\Encoding.class
+com\lirik\model\MotorcyclePart.class
+com\lirik\exception\StoreException.class
+com\lirik\model\Tool.class
+com\lirik\model\Product$1.class
+Main.class
+com\lirik\service\Store.class
+com\lirik\model\VehiclePart.class
+com\lirik\model\Food.class
+com\lirik\exception\StoreRuntimeException.class

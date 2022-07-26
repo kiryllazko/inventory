@@ -1,3 +1,5 @@
+package com.lirik.model;
+
 import java.util.*;
 
 public class Product {
@@ -11,7 +13,7 @@ public class Product {
     public int getId () {return id;}
     public String getTitle() {return title;}
 
-    Product(int id, String title) {this.id = id;this.title = title;}
+    public Product(int id, String title) {this.id = id;this.title = title;}
 
     public boolean equals (Object o) {
         if (o == null) return false;
